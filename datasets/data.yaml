@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 4
+names: ['cham cham', 'naan', 'paneer butter masala', 'rasgulla']
+
+roboflow:
+  workspace: smart-india-hackathon
+  project: indian-food-yolov5
+  version: 1
+  license: Public Domain
+  url: https://universe.roboflow.com/smart-india-hackathon/indian-food-yolov5/dataset/1
