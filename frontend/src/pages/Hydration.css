@@ -1,0 +1,29 @@
+/* filepath: /Users/akbroc/Desktop/ML/frontend/src/pages/Hydration.css */
+.hydration-page { position: relative; width:100%; min-height:100vh; margin:0; padding-top:0; color:#eaf0ff; }
+.hydration-page .pill-nav-container { z-index: 999 !important; }
+.hydration-bg { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+.hydration-page > :not(.hydration-bg) { position: relative; z-index: 1; }
+.glass.hero, .grid { width:min(1080px,92vw); margin-left:auto; margin-right:auto; }
+.glass.hero { margin-top: 100px; margin-bottom: 20px; }
+.glass { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.25); border-radius: 22px; padding: 20px; box-shadow: 0 30px 80px rgba(16,24,40,0.18), inset 0 1px 0 rgba(255,255,255,0.15); backdrop-filter: blur(24px) saturate(120%); -webkit-backdrop-filter: blur(24px) saturate(120%); }
+.hero { text-align:center; }
+.head h1 { margin:0; }
+.rings { display:flex; gap:16px; justify-content:center; margin-top:12px; flex-wrap:wrap; }
+.ring-card { text-align:center; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.2); border-radius: 18px; padding: 16px; backdrop-filter: blur(12px); }
+.ring { filter: drop-shadow(0 8px 20px rgba(0,255,255,0.4)); }
+.ring text { fill:#eaf0ff; font-weight:800; font-size:20px; }
+.ring-track { stroke: rgba(255,255,255,0.15); stroke-width: 12; fill: none; }
+.ring-fill { stroke: #00ffff; stroke-width: 12; fill: none; stroke-linecap: round; transform: rotate(-90deg); transform-origin: 50% 50%; filter: drop-shadow(0 0 8px rgba(0,255,255,0.6)); }
+.ring-label { margin-top: 8px; font-weight: 700; color: rgba(255,255,255,0.95); text-transform: uppercase; font-size: 13px; letter-spacing: .8px; }
+.grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap:16px; margin-top:16px; width:min(1080px,92vw); margin-left:auto; margin-right:auto; margin-bottom: 32px; }
+.card { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.25); border-radius: 18px; padding: 20px; backdrop-filter: blur(20px); }
+.card h2 { margin-top:0; }
+.row { display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin:8px 0; }
+.row input { background: rgba(0,0,0,0.3); color:#fff; border:1px solid rgba(255,255,255,0.3); border-radius:10px; padding:10px 12px; }
+.btn { padding: 11px 16px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.35); cursor: pointer; font-weight: 800; letter-spacing: .2px; transition: transform .18s ease, box-shadow .2s ease, opacity .2s ease; }
+.btn.primary { background: linear-gradient(135deg,#00ffff,#00d4d4); color: #04251c; box-shadow: 0 10px 24px rgba(0,255,255,0.35); }
+.btn.primary:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 14px 28px rgba(0,255,255,0.5); }
+.btn.ghost { background: rgba(255,255,255,0.10); color: #fff; }
+.btn.ghost:hover { transform: translateY(-1px); box-shadow: 0 10px 24px rgba(255,255,255,0.18); }
+.history ul { list-style:none; padding:0; margin:0; display:grid; gap:8px; }
+.history li { display:flex; justify-content:space-between; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.25); border-radius: 12px; padding: 10px 14px; }

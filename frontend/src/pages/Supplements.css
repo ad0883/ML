@@ -1,0 +1,232 @@
+/* filepath: /Users/akbroc/Desktop/ML/frontend/src/pages/Supplements.css */
+.supp-page {
+    width: min(1080px, 92vw); 
+    margin: 80px auto 32px; 
+    color: #eaf0ff; 
+    padding-top: 96px;
+    position: relative;
+    min-height: 100vh;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 22px;
+    padding: 16px;
+    box-shadow: 0 30px 80px rgba(16, 24, 40, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(18px) saturate(120%);
+    -webkit-backdrop-filter: blur(18px) saturate(120%);
+}
+
+.head h1 {
+    margin: 0;
+}
+
+.add-form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 12px 0;
+}
+
+.add-form input {
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    padding: 8px 10px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
+    margin-top: 12px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 22px;
+    padding: 16px;
+    box-shadow: 0 30px 80px rgba(16, 24, 40, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(18px) saturate(120%);
+    -webkit-backdrop-filter: blur(18px) saturate(120%);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 40px 90px rgba(16, 24, 40, 0.30), inset 0 1px 0 rgba(255, 255, 255, 0.30);
+}
+
+.card h3 {
+    margin: 0 0 6px;
+}
+
+.times {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.pill {
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.pill.done {
+    background: linear-gradient(135deg, #20e3b2, #58ffd5);
+    color: #04251c;
+    border-color: transparent;
+}
+
+.hints ul {
+    margin: 6px 0 0;
+    padding-left: 18px;
+}
+
+/* Background integration overrides */
+.background-container {
+    z-index: 1 !important;
+    /* under content but above page background */
+    opacity: 1 !important;
+    /* full intensity */
+    pointer-events: none;
+    /* non-interactive */
+}
+
+.supplements-content {
+    position: relative;
+    z-index: 2 !important;
+    /* keep content above background */
+}
+
+/* DarkVeil full background overrides */
+.supplements-page {
+    background: transparent !important;
+}
+
+/* Ensure DarkVeil fills the viewport when used as supplements background */
+.background-container .darkveil-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    right: 0;
+    bottom: 0;
+    opacity: 1 !important;
+}
+
+/* DarkVeil full-screen background for Supplements */
+.supp-page {
+    position: relative;
+    min-height: 100vh;
+}
+
+.dv-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    /* behind content */
+    pointer-events: none;
+    /* do not block clicks */
+}
+
+.dv-bg .darkveil-canvas {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Ensure main content sits above background */
+.supp-page>*:not(.dv-bg) {
+    position: relative;
+    z-index: 1;
+}
+
+/* Sticky, centered navbar for Supplements */
+.supp-nav {
+    position: fixed !important;
+    top: calc(env(safe-area-inset-top, 0px) + 16px) !important;
+    left: 0 !important;
+    right: 0 !important;
+    transform: none !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    pointer-events: none !important;
+    /* container non-interactive */
+    z-index: 1000 !important;
+}
+
+.supp-nav>* {
+    pointer-events: auto !important;
+    /* keep PillNav interactive */
+}
+
+/* Ensure page content doesn't hide under nav */
+.supp-page {
+    padding-top: 96px;
+    /* adjust if your PillNav height differs */
+}
+
+/* Keep enough offset so content doesn't overlap */
+.supp-page {
+    padding-top: 96px;
+}
+
+@media (max-width: 640px) {
+    .supp-nav {
+        top: calc(env(safe-area-inset-top, 0px) + 8px) !important;
+    }
+
+    .supp-page {
+        padding-top: 84px;
+    }
+}
+
+/* Subtle glass boost for navbar container (optional) */
+.supp-nav>* {
+    -webkit-backdrop-filter: saturate(130%) blur(6px);
+    backdrop-filter: saturate(130%) blur(6px);
+}
+
+/* Match hydration navbar stacking */
+.supp-page .pill-nav-container {
+    z-index: 999 !important;
+    position: relative;
+}
+
+/* Space below navbar similar to hydration */
+.glass.head {
+    margin-top: 50px;
+}
+
+/* Final layout normalization to match other pages */
+
+/* Ensure single source of page spacing and sizing */
+.supp-page {
+  width: min(1080px, 92vw);
+  margin: 80px auto 32px;
+  color: #eaf0ff;
+  padding-top: 96px;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Avoid double top padding if a container is used inside supp-page */
+.supp-container { padding-top: 0; }
+
+@media (max-width: 640px) {
+  .supp-container { padding-top: 0; }
+}

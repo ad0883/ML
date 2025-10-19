@@ -1,0 +1,202 @@
+:root {
+  --primary: #6ef3c5;
+  --secondary: #6a11cb;
+  --bg-dark: #0a0f1a;
+  --bg-card: rgba(255,255,255,0.03);
+  --text-light: #eaf6fb;
+  --text-muted: #a0bcd8;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0a0f1a, #141b2e);
+  color: var(--text-light);
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.app-header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  color: #fff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.app-header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.4rem;
+  letter-spacing: 1px;
+}
+.app-header p {
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* Main */
+main {
+  flex: 1;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Meal Results Grid */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Footer */
+.app-footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: var(--bg-card);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* No results */
+.no-results {
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: 1rem;
+}
+
+/* Button base */
+.button {
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  color: #041019;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+.button.ghost {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: var(--text-light);
+}
+
+/* Input fields */
+input[type="number"] {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.02);
+  color: var(--text-light);
+  width: 140px;
+  font-weight: 500;
+  outline: none;
+  transition: 0.2s;
+}
+input[type="number"]:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 10px rgba(110,243,197,0.3);
+}
+
+/* Result Card */
+.result-card {
+  background: rgba(255,255,255,0.03);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+.result-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+.result-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #fff;
+}
+.conf-pill {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.08);
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+/* Confidence bar */
+.conf-bar {
+  height: 8px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 8px;
+  margin-top: 8px;
+  overflow: hidden;
+}
+.conf-bar i {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  border-radius: 8px;
+  transition: width 0.5s ease;
+}
+
+/* Nutrition chips */
+.nutrition {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+.chip {
+  padding: 4px 10px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.05);
+  font-size: 0.85rem;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+}
+
+/* BMI Calculator */
+.bmi-calculator {
+  margin-top: 2rem;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.03);
+  box-shadow: 0 10px 28px rgba(2,6,23,0.45);
+  color: var(--text-light);
+}
+
+/* History items */
+.history-item {
+  background: rgba(255,255,255,0.03);
+  padding: 10px 12px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+/* Media */
+@media (max-width: 900px) {
+  .bmi-top { flex-direction: column; }
+  .bmi-right { width: 100%; margin-top: 1rem; }
+}

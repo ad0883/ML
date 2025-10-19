@@ -1,6 +1,8 @@
-train: ../train/images
-val: ../valid/images
-test: ../test/images
+# Update these paths to match your actual dataset structure
+path: /Users/akbroc/Desktop/ML/datasets  # Root directory
+train: train/images  # Relative to 'path'
+val: valid/images    # Relative to 'path'
+test: test/images 
 
 nc: 4
 names: ['cham cham', 'naan', 'paneer butter masala', 'rasgulla']

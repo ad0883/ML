@@ -1,0 +1,37 @@
+/* filepath: /Users/akbroc/Desktop/ML/frontend/src/components/CardSwap.css */
+.cs-card-swap-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(5%, 20%);
+  transform-origin: bottom right;
+  perspective: 900px;
+  overflow: visible;
+}
+
+.cs-card {
+  /* glassmorphism styling */
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 30px 60px rgba(16, 24, 40, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(18px) saturate(120%);
+  -webkit-backdrop-filter: blur(18px) saturate(120%);
+  color: #eaf0ff;
+  /* preserve 3D and performance tweaks */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-style: preserve-3d;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+@media (max-width: 768px) {
+  .cs-card-swap-container { transform: scale(0.75) translate(25%, 25%); }
+}
+@media (max-width: 480px) {
+  .cs-card-swap-container { transform: scale(0.55) translate(25%, 25%); }
+}

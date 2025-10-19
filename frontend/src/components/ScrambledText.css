@@ -1,0 +1,3 @@
+/* filepath: /Users/akbroc/Desktop/ML/frontend/src/components/ScrambledText.css */
+.text-block { margin: 2vw 0; max-width: 680px; font-family: monospace; font-size: clamp(14px, 2.6vw, 28px); color: #eaf0ff; }
+.char { will-change: transform; display: inline-block; }

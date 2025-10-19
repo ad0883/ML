@@ -1,0 +1,7 @@
+/* filepath: /Users/akbroc/Desktop/ML/frontend/src/components/PrismaticBurst.css */
+.prismatic-burst-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}

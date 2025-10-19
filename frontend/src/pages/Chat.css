@@ -1,0 +1,68 @@
+/* filepath: /Users/akbroc/Desktop/ML/frontend/src/pages/Chat.css */
+.chat-page { 
+  position: relative; 
+  min-height: 100vh; 
+}
+
+.glass { 
+  background: rgba(255,255,255,0.10); 
+  border: 1px solid rgba(255,255,255,0.35); 
+  border-radius: 22px; 
+  padding: 20px; 
+  box-shadow: 0 30px 80px rgba(16,24,40,0.25), inset 0 1px 0 rgba(255,255,255,0.25); 
+  backdrop-filter: blur(18px) saturate(120%); 
+  -webkit-backdrop-filter: blur(18px) saturate(120%); 
+}
+
+.chat-container { 
+  display: flex; 
+  flex-direction: column; 
+  width: min(1080px, 92vw); 
+  margin: 80px auto 32px; 
+  color: #eaf0ff; 
+  padding-top: 96px;
+  height: calc(100vh - 160px); 
+  min-height: 500px; 
+  max-height: 800px; 
+}
+
+.chat-header { 
+  text-align: center; 
+  margin-bottom: 16px; 
+  border-bottom: 1px solid rgba(255,255,255,0.25); 
+  padding-bottom: 12px; 
+}
+
+.chat-header h2 { 
+  margin: 0; 
+}
+
+.disclaimer { 
+  margin: 4px 0 0; 
+  font-size: 12px; 
+  color: rgba(255,255,255,0.6); 
+}
+
+.streamlit-embed { 
+  flex: 1; 
+  overflow: hidden; 
+  border-radius: 12px; 
+  background: #fff; 
+}
+
+/* Full-screen Aurora background stacking for Chat */
+.chat-bg { 
+  position: fixed; 
+  inset: 0; 
+  z-index: 0; 
+  pointer-events: none; 
+}
+
+.chat-page > *:not(.chat-bg) { 
+  position: relative; 
+  z-index: 1; 
+}
+
+@media (max-width: 640px) {
+  .chat-container { padding-top: 84px; }
+}
