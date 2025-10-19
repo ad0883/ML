@@ -6,9 +6,9 @@ pydantic==1.10.7
 python-jose==3.3.0
 passlib[bcrypt]==1.7.4
 python-dotenv==1.0.0
-ultralytics==8.0.136
+ultralytics>=8.1.0
 pillow==10.4.0
-opencv-python-headless==4.8.0.78
+opencv-python-headless==4.10.0.84
 numpy==1.26.2
 aiofiles==23.2.1
 requests==2.31.0
