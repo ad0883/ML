@@ -9,6 +9,8 @@ services:
     envVars:
       - key: ALLOW_ORIGINS
         value: https://healthnexus-frontend.onrender.com
+    autoDeploy: true
+    healthCheckPath: /
 
   - type: static
     name: healthnexus-frontend
@@ -18,3 +20,8 @@ services:
     envVars:
       - key: VITE_API_URL
         value: https://healthnexus-backend.onrender.com
+    autoDeploy: true
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
