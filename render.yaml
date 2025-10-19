@@ -3,10 +3,9 @@ services:
     name: healthnexus-backend
     env: python
     pythonVersion: 3.11.9
-    rootDir: backend
     plan: free
     buildCommand: pip install --upgrade pip setuptools wheel && pip install -r requirements.txt
-    startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: ALLOW_ORIGINS
         value: https://healthnexus-frontend.onrender.com
